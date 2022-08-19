@@ -9,5 +9,8 @@
         <module name="basicTestinginJava" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="basicTestingJava" target="8" />
+    </bytecodeTargetLevel>
   </component>
 </project>
