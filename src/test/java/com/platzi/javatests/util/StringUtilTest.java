@@ -1,16 +1,15 @@
 package com.platzi.javatests.util;
 
+import org.junit.Test;
+
 import static org.junit.Assert.assertEquals;
 
 public class StringUtilTest {
     public static void main(String[] args) {
 
-        String result = StringUtil.repeat("Hello ", 3);
-        assertEquals(result, "Hello Hello Hello ");
+        assertEquals(StringUtil.repeat("Hello ", 3), "Hello Hello Hello ");
 
-
-        String result2 = StringUtil.repeat("Hello ", 1);
-            assertEquals(result2, "Hello ");
+        assertEquals(StringUtil.repeat("Hello ", 1), "Hello ");
 
     }
 

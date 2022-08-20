@@ -24,7 +24,7 @@ public class PasswordUtilTest {
 
     @Test
     public void strongWhenHasLettersAndNumbersAndSymbols() {
-        assertEquals(PasswordUtil.securityLevel.STRONG ,PasswordUtil.assessPassword("abcds&dfs-d1231ef3"));
+        assertEquals(PasswordUtil.securityLevel.STRONG ,PasswordUtil.assessPassword("abcds&df1ef3"));
     }
 }
 
