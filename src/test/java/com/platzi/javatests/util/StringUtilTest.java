@@ -20,4 +20,9 @@ public class StringUtilTest {
     public void repeatZeroTimes() {
         assertEquals(StringUtil.repeat("Hello ", 0), "");
     }
+
+    @Test (expected = IllegalArgumentException.class)
+    public void repeatNegativeTimes() {
+        assertEquals(StringUtil.repeat("Hello ", -1), "");
+    }
 }
