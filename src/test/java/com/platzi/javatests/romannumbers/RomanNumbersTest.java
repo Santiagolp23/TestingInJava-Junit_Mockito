@@ -143,7 +143,7 @@ public class RomanNumbersTest {
 
     @Test
     public void valid_number_40_to_roman() {
-        assertEquals("XL", RomanNumbers.arabicToRoman(0));
+        assertEquals("XL", RomanNumbers.arabicToRoman(40));
     }
 
     @Test
