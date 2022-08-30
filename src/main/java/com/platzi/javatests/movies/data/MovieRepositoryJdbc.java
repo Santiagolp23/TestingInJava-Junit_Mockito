@@ -6,6 +6,7 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 
 import java.util.Collection;
+import java.util.Locale;
 
 public class MovieRepositoryJdbc implements MovieRepository {
 
@@ -24,6 +25,12 @@ public class MovieRepositoryJdbc implements MovieRepository {
     @Override
     public Collection<Movie> findAll() {
         return jdbcTemplate.query("select * from movies", movieMapper);
+    }
+
+    @Override
+    public Collection<Movie> findByName(String name) {
+        name = name.toLowerCase();
+        return jdbcTemplate.query("select * from movies where lower(name) like ?", movieMapper,"%" + name + "%");
     }
 
     @Override
