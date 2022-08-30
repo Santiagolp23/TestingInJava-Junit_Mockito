@@ -36,7 +36,7 @@ public class MovieRepositoryIntegrationTest {
     }
 
     @Test
-    public void load_all_movies() throws SQLException {
+    public void loadAllMovies() throws SQLException {
 
         Collection<Movie> movies = movieRepository.findAll();
 
@@ -45,5 +45,11 @@ public class MovieRepositoryIntegrationTest {
                 new Movie(2, "Memento", 113, Genre.THRILLER),
                 new Movie(3, "Matrix", 136, Genre.ACTION)
         ));
+    }
+
+    @Test
+    public void loadMovieById() {
+        Movie movie = movieRepository.findById(2);
+        assertEquals(new Movie(2, "Memento", 113, Genre.THRILLER), movie);
     }
 }

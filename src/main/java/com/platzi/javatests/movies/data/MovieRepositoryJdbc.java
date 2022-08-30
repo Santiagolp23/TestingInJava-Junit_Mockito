@@ -17,7 +17,8 @@ public class MovieRepositoryJdbc implements MovieRepository {
 
     @Override
     public Movie findById(long id) {
-        return null;
+
+        return jdbcTemplate.queryForObject("select * from movies where id = " + id, movieMapper);
     }
 
     @Override
