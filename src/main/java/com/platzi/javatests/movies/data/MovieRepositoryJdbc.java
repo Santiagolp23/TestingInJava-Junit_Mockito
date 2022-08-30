@@ -28,6 +28,7 @@ public class MovieRepositoryJdbc implements MovieRepository {
 
     @Override
     public void saveOrUpdate(Movie movie) {
+        jdbcTemplate.update("insert into movies (name, minutes, genre) VALUES (?,?,?)", movie.getName().toString(), movie.getMinutes(), movie.getGenre().toString());
 
     }
 
